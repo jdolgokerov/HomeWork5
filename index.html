@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork5</title>
+</head>
+<body>
+    <script>
+        const string = prompt('Введите строку');
+        const number = +prompt('Введите число');
+        const symbol = prompt('Введите символ');
+
+        function padString(string, number, symbol, toEnd = true) {
+            const symbolCount = number - string.lenght;
+
+            if (symbolCount < 0) return string;
+
+            for (let i = 0; i < symbolCount; i++) {
+                if (toEnd) {
+                    string += symbol;
+                }
+                
+                if (!toEnd) {
+                    string = symbol + string;
+                }    
+            }
+
+            return string;
+
+        }
+        console.log(padString(string, number, symbol));
+
+    </script>
+</body>
+</html>
